@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "Library": {
+      "commandName": "Project",
+      "executablePath": "dotnet",
+      "commandLineArgs": "-t Substitute --project \"Common.Build\"",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Build.Cake", "Common.Build.Cake\Common.Build.Cake.csproj", "{92193B7F-1E1D-4133-8B55-2B04ADAB74D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Build", "Common.Build\Common.Build.csproj", "{5EE16B2B-C381-4878-89B3-0F5EDFA90B34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92193B7F-1E1D-4133-8B55-2B04ADAB74D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92193B7F-1E1D-4133-8B55-2B04ADAB74D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92193B7F-1E1D-4133-8B55-2B04ADAB74D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92193B7F-1E1D-4133-8B55-2B04ADAB74D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE16B2B-C381-4878-89B3-0F5EDFA90B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE16B2B-C381-4878-89B3-0F5EDFA90B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE16B2B-C381-4878-89B3-0F5EDFA90B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE16B2B-C381-4878-89B3-0F5EDFA90B34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
