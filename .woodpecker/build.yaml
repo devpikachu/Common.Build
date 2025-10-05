@@ -1,0 +1,9 @@
+﻿when:
+  - event: push
+    branch: main
+
+steps:
+  - name: Package
+    image: mcr.microsoft.com/dotnet/sdk:9.0
+    commands:
+      - ./build.sh -t Build

@@ -1,5 +1,7 @@
 ﻿# Common Build
 
+[![status-badge](https://ci.omni.ms/api/badges/1/status.svg)](https://ci.omni.ms/repos/1)
+
 Common library used in the building processes.
 
 ## License
