@@ -1,4 +1,5 @@
-﻿#!/usr/bin/env bash
-pushd Common.Build.Cake || exit 1
-dotnet run --project Common.Build.Cake/Common.Build.Cake.csproj -- "$@"
+﻿pushd Common.Build.Cake || exit 1
+dotnet run --project Common.Build.Cake.csproj -- "$@"
+ExitCode=$?
 popd || exit 1
+exit $ExitCode
