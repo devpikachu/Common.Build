@@ -1,4 +1,4 @@
-﻿## 0.2.2
+## 0.2.2
 **:bug: Bug Fixes**
 - Fix incorrectly package source generator
 
