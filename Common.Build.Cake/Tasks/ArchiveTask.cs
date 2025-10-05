@@ -1,4 +1,4 @@
-﻿using Cake.Frosting;
+using Cake.Frosting;
 using JetBrains.Annotations;
 
 namespace Common.Build.Cake.Tasks;

@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Build.Cake", "Common.Build.Cake\Common.Build.Cake.csproj", "{92193B7F-1E1D-4133-8B55-2B04ADAB74D2}"
 EndProject

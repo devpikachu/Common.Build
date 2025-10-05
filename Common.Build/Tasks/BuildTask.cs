@@ -1,4 +1,4 @@
-﻿using Cake.Common.Tools.DotNet;
+using Cake.Common.Tools.DotNet;
 using Cake.Common.Tools.DotNet.Clean;
 using Cake.Common.Tools.DotNet.Publish;
 using Cake.Frosting;

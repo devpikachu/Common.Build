@@ -1,4 +1,4 @@
-﻿# Common Build
+# Common Build
 
 [![status-badge](https://ci.omni.ms/api/badges/1/status.svg)](https://ci.omni.ms/repos/1)
 

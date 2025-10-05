@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using Cake.Common.IO;
 using Cake.Frosting;
 using JetBrains.Annotations;
