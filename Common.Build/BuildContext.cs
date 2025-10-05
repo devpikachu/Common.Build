@@ -15,6 +15,7 @@ public class BuildContext : FrostingContext
 
     public string Project { get; }
     public string Profile { get; }
+    public bool SkipSubstitution { get; }
     public SolutionConfig SolutionConfig { get; }
     public ProjectConfig ProjectConfig { get; }
 
@@ -24,6 +25,7 @@ public class BuildContext : FrostingContext
     {
         Project = context.Argument<string>("project");
         Profile = context.Argument<string>("profile", "Release");
+        SkipSubstitution = context.Argument("skip-substitution", false);
 
         var solutionPath = Path.Combine("..", ConfigFileName);
         if (!File.Exists(solutionPath))

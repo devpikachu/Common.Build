@@ -10,6 +10,11 @@ public class SubstituteTask : FrostingTask<BuildContext>
 
     public override void Run(BuildContext context)
     {
+        if (context.SkipSubstitution)
+        {
+            return;
+        }
+
         foreach (var substitute in context.ProjectConfig.Substitute)
         {
             var path = Path.Combine("..", context.Project, substitute);

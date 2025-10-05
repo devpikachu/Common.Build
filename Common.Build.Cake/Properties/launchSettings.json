@@ -3,7 +3,7 @@
     "Library": {
       "commandName": "Project",
       "executablePath": "dotnet",
-      "commandLineArgs": "-t Substitute --project \"Common.Build\"",
+      "commandLineArgs": "-t Build --project \"Common.Build\" --skip-substitution true",
       "workingDirectory": "$(ProjectDir)"
     }
   }
