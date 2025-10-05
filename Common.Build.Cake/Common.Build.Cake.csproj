@@ -18,6 +18,10 @@
 
   <ItemGroup>
     <ProjectReference Include="../Common.Build/Common.Build.csproj"/>
+    <ProjectReference Include="../Common.Build.Generator/Common.Build.Generator.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Analyzer</OutputItemType>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>

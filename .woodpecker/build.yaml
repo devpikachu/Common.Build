@@ -2,8 +2,13 @@ when:
   - event: push
     branch: main
 
+matrix:
+  PROJECT:
+    - Common.Build
+    - Common.Build.Generator
+
 steps:
   - name: build
     image: mcr.microsoft.com/dotnet/sdk:9.0
     commands:
-      - bash build.sh -t Build --project Common.Build
+      - bash build.sh -t Build --project ${PROJECT}

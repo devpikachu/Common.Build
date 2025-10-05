@@ -1,11 +1,16 @@
 when:
   - event: tag
 
+matrix:
+  PROJECT:
+    - Common.Build
+    - Common.Build.Generator
+
 steps:
   - name: package
     image: mcr.microsoft.com/dotnet/sdk:9.0
     commands:
-      - bash build.sh -t Package --project Common.Build
+      - bash build.sh -t Package --project ${PROJECT}
 
   - name: publish
     image: mcr.microsoft.com/dotnet/sdk:9.0

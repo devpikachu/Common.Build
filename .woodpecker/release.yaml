@@ -1,11 +1,16 @@
 when:
   - event: tag
 
+matrix:
+  PROJECT:
+    - Common.Build
+    - Common.Build.Generator
+
 steps:
   - name: archive
     image: mcr.microsoft.com/dotnet/sdk:9.0
     commands:
-      - bash build.sh -t Archive --project Common.Build
+      - bash build.sh -t Archive --project ${PROJECT}
 
   - name: release
     image: woodpeckerci/plugin-release:latest
