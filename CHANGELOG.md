@@ -1,4 +1,8 @@
-﻿## 0.2.1
+﻿## 0.2.2
+**:bug: Bug Fixes**
+- Fix incorrectly package source generator
+
+## 0.2.1
 **:sparkles: Features**
 - Add ability to skip `Substitution` step to facilitate easier local debugging
 
