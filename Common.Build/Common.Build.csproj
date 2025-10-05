@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <PackageId>Common.Build</PackageId>
-    <Version>0.1.1</Version>
+    <Version>12.34.56</Version>
     <Authors>Andrei "DetPikachu" Hava</Authors>
     <Company>Andrei "DetPikachu" Hava</Company>
     <Product>Common.Build</Product>
