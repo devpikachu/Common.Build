@@ -5,7 +5,7 @@ steps:
   - name: Package
     image: mcr.microsoft.com/dotnet/sdk:9.0
     commands:
-      - ./build.sh -t Package
+      - bash build.sh -t Package
 
   - name: Publish
     image: mcr.microsoft.com/dotnet/sdk:9.0

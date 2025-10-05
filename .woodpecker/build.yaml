@@ -3,7 +3,7 @@
     branch: main
 
 steps:
-  - name: Package
+  - name: Build
     image: mcr.microsoft.com/dotnet/sdk:9.0
     commands:
-      - ./build.sh -t Build
+      - bash build.sh -t Build
