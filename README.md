@@ -1,6 +1,6 @@
 # Common Build
 
-![release](https://img.shields.io/gitea/v/release/vintage-story-mods/common-build?gitea_url=https%3A%2F%2Fgit.omni.ms&sort=semver&display_name=release&style=flat) [![ci~~~~](https://ci.omni.ms/api/badges/1/status.svg)](https://ci.omni.ms/repos/1) ![Static Badge](https://img.shields.io/badge/dotnet-9.0-%236F419A)
+![release](https://img.shields.io/gitea/v/release/vintage-story-mods/common-build?gitea_url=https%3A%2F%2Fgit.omni.ms&sort=semver&display_name=release&style=flat) [![ci](https://ci.omni.ms/api/badges/1/status.svg)](https://ci.omni.ms/repos/1) ![Static Badge](https://img.shields.io/badge/dotnet-9.0-%236F419A)
 
 Common library used in the building processes.
 
