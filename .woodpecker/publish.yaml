@@ -2,12 +2,12 @@ when:
   - event: tag
 
 steps:
-  - name: Package
+  - name: package
     image: mcr.microsoft.com/dotnet/sdk:9.0
     commands:
       - bash build.sh -t Package --project Common.Build
 
-  - name: Publish
+  - name: publish
     image: mcr.microsoft.com/dotnet/sdk:9.0
     environment:
       NUGET_REGISTRY_URL:

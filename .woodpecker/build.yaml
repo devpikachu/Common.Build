@@ -3,7 +3,7 @@ when:
     branch: main
 
 steps:
-  - name: Build
+  - name: build
     image: mcr.microsoft.com/dotnet/sdk:9.0
     commands:
       - bash build.sh -t Build --project Common.Build
