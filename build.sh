@@ -1,5 +1,5 @@
-pushd Common.Build.Cake || exit 1
+set -e
+
+pushd Common.Build.Cake
 dotnet run --project Common.Build.Cake.csproj -- "$@"
-ExitCode=$?
-popd || exit 1
-exit $ExitCode
+popd

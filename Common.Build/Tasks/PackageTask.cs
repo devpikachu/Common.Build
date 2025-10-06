@@ -1,6 +1,7 @@
 using Cake.Common.Tools.DotNet;
 using Cake.Common.Tools.DotNet.Pack;
 using Cake.Frosting;
+using Common.Build.Core;
 using JetBrains.Annotations;
 
 namespace Common.Build.Tasks;

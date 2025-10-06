@@ -2,7 +2,7 @@ using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 
-namespace Common.Build.Generator;
+namespace Common.Build.Generator.Generators;
 
 [Generator]
 public class TasksGenerator : IIncrementalGenerator

@@ -1,4 +1,5 @@
 using Cake.Frosting;
+using Common.Build.Core;
 using JetBrains.Annotations;
 
 namespace Common.Build.Tasks;
@@ -24,7 +25,7 @@ public class SubstituteTask : FrostingTask<BuildContext>
             }
 
             var contents = File.ReadAllText(path);
-            contents = contents.Replace(VersionPlaceholder, context.SolutionConfig.Version);
+            contents = contents.Replace(VersionPlaceholder, context.Version);
 
             File.WriteAllText(path, contents);
         }

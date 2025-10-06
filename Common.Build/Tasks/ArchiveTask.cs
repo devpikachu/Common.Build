@@ -1,6 +1,7 @@
 using System.Text;
 using Cake.Common.IO;
 using Cake.Frosting;
+using Common.Build.Core;
 using JetBrains.Annotations;
 
 namespace Common.Build.Tasks;
@@ -18,7 +19,7 @@ public class ArchiveTask : FrostingTask<BuildContext>
         }
 
         archiveName.Append('_');
-        archiveName.Append(context.SolutionConfig.Version);
+        archiveName.Append(context.Version);
         archiveName.Append(".zip");
 
         context.Zip(context.InputPath(), context.OutputPath(archiveName.ToString()));

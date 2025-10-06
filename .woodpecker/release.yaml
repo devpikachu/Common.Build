@@ -10,7 +10,7 @@ steps:
   - name: archive
     image: mcr.microsoft.com/dotnet/sdk:9.0
     commands:
-      - bash build.sh -t Archive --project ${PROJECT}
+      - bash build.sh --target Archive --oproject ${PROJECT}
 
   - name: release
     image: woodpeckerci/plugin-release:latest

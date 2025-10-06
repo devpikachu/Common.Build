@@ -8,7 +8,8 @@ Common library used in the building processes.
 
 | Version | Status             |
 |---------|--------------------|
-| 0.2.x   | :white_check_mark: |
+| 0.3.x   | :white_check_mark: |
+| 0.2.x   | :no_entry_sign:    |
 | 0.1.x   | :no_entry_sign:    |
 
 ## License

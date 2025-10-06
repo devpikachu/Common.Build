@@ -1,3 +1,9 @@
+## 0.3.0
+**:boom: Breaking Changes**
+- Removed `Version` parameter from `SolutionConfig`
+- Added mandatory `--oversion` argument (because the default CLI highjacks `--version`)
+- Prefixed all existing arguments with `o` for consistency (i.e. `--oproject`, `--oprofile`, etc.)
+
 ## 0.2.6
 **:bug: Bug Fixes**
 - Fix project references

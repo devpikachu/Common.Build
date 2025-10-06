@@ -2,6 +2,7 @@ using Cake.Common.Tools.DotNet;
 using Cake.Common.Tools.DotNet.Clean;
 using Cake.Common.Tools.DotNet.Publish;
 using Cake.Frosting;
+using Common.Build.Core;
 using JetBrains.Annotations;
 
 namespace Common.Build.Tasks;

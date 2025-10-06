@@ -6,7 +6,7 @@ using Cake.Json;
 using Common.Build.Config;
 using JetBrains.Annotations;
 
-namespace Common.Build;
+namespace Common.Build.Core;
 
 [UsedImplicitly]
 public class BuildContext : FrostingContext
@@ -15,6 +15,7 @@ public class BuildContext : FrostingContext
 
     public string Project { get; }
     public string Profile { get; }
+    public string Version { get; }
     public bool SkipSubstitution { get; }
     public SolutionConfig SolutionConfig { get; }
     public ProjectConfig ProjectConfig { get; }
@@ -23,9 +24,10 @@ public class BuildContext : FrostingContext
 
     public BuildContext(ICakeContext context) : base(context)
     {
-        Project = context.Argument<string>("project");
-        Profile = context.Argument<string>("profile", "Release");
-        SkipSubstitution = context.Argument("skip-substitution", false);
+        Project = context.Argument<string>("oproject");
+        Profile = context.Argument<string>("oprofile", "Release");
+        Version = context.Argument<string>("oversion");
+        SkipSubstitution = context.Argument("oskip-substitution", false);
 
         var solutionPath = Path.Combine("..", ConfigFileName);
         if (!File.Exists(solutionPath))
