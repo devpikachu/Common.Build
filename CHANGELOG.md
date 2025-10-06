@@ -1,3 +1,7 @@
+## 0.2.3
+**:recycle: Refactors**
+- Upgraded `Common.Build.Generator`'s language version to 13
+
 ## 0.2.2
 **:bug: Bug Fixes**
 - Fix incorrectly package source generator
