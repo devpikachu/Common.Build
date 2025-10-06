@@ -20,6 +20,7 @@
     <PackageReference Include="Cake.Json" Version="7.0.1"/>
     <PackageReference Include="JetBrains.Annotations" Version="2025.2.2">
       <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
 

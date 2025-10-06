@@ -1,3 +1,7 @@
+## 0.2.5
+**:bug: Bug Fixes**
+- Re-add runtime exclusion to `JetBrains.Annotations`
+
 ## 0.2.4
 **:recycle: Refactors**
 - Marked `JetBrains.Annotations` dependency as private
