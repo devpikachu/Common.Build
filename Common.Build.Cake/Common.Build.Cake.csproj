@@ -18,21 +18,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="$(SolutionDir)/Common.Build/Common.Build.csproj"/>
-    <ProjectReference Include="$(SolutionDir)/Common.Build.Generator/Common.Build.Generator.csproj">
+    <ProjectReference Include="../Common.Build/Common.Build.csproj"/>
+    <ProjectReference Include="../Common.Build.Generator/Common.Build.Generator.csproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <OutputItemType>Analyzer</OutputItemType>
     </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="$(SolutionDir)/.editorconfig"/>
-    <None Include="$(SolutionDir)/.gitignore"/>
-    <None Include="$(SolutionDir)/build.ps1"/>
-    <None Include="$(SolutionDir)/build.sh"/>
-    <None Include="$(SolutionDir)/buildConfig.json"/>
-    <None Include="$(SolutionDir)/CHANGELOG.md"/>
-    <None Include="$(SolutionDir)/README.md"/>
+    <None Include="../.editorconfig"/>
+    <None Include="../.gitignore"/>
+    <None Include="../build.ps1"/>
+    <None Include="../build.sh"/>
+    <None Include="../buildConfig.json"/>
+    <None Include="../CHANGELOG.md"/>
+    <None Include="../README.md"/>
   </ItemGroup>
 
 </Project>

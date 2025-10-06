@@ -1,3 +1,7 @@
+## 0.2.6
+**:bug: Bug Fixes**
+- Fix project references
+
 ## 0.2.5
 **:bug: Bug Fixes**
 - Re-add runtime exclusion to `JetBrains.Annotations`
