@@ -1,3 +1,7 @@
+## 0.2.4
+**:recycle: Refactors**
+- Marked `JetBrains.Annotations` dependency as private
+
 ## 0.2.3
 **:recycle: Refactors**
 - Upgraded `Common.Build.Generator`'s language version to 13
