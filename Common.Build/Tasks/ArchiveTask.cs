@@ -19,9 +19,9 @@ public class ArchiveTask : FrostingTask<BuildContext>
         }
 
         archiveName.Append('_');
-        archiveName.Append(context.Version);
+        archiveName.Append(context.InternalConfig.Version);
         archiveName.Append(".zip");
 
-        context.Zip(context.InputPath(), context.OutputPath(archiveName.ToString()));
+        context.Zip(PathHandling.InputPath(context), PathHandling.OutputPath(context, archiveName.ToString()));
     }
 }

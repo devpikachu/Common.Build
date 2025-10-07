@@ -13,58 +13,64 @@ public class BuildContext : FrostingContext
 {
     private const string ConfigFileName = "buildConfig.json";
 
-    public string Project { get; }
-    public string Profile { get; }
-    public string Version { get; }
-    public bool SkipSubstitution { get; }
+    public InternalConfig InternalConfig { get; }
     public SolutionConfig SolutionConfig { get; }
     public ProjectConfig ProjectConfig { get; }
 
-    public string ProjectFile { get; }
-
     public BuildContext(ICakeContext context) : base(context)
     {
-        Project = context.Argument<string>("oproject");
-        Profile = context.Argument<string>("oprofile", "Release");
-        Version = context.Argument<string>("oversion");
-        SkipSubstitution = context.Argument("oskip-substitution", false);
+        // General
+        var project = context.Argument<string?>("general-project", null);
+        var profile = context.Argument<string>("general-profile", "Release");
+        var version = context.Argument<string>("general-version", "12.34.56");
+        var skipSubstitution = context.Argument("general-skipSubstitution", false);
 
-        var solutionPath = Path.Combine("..", ConfigFileName);
-        if (!File.Exists(solutionPath))
+        // Internal config
         {
-            Console.WriteLine(solutionPath);
-            throw new ApplicationException($"Solution-level \"{ConfigFileName}\" is missing");
+            InternalConfig = new InternalConfig
+            {
+                Project = string.Empty,
+                Profile = profile,
+                Version = version,
+                SkipSubstitution = skipSubstitution,
+                ProjectFilePath = string.Empty
+            };
         }
 
-        SolutionConfig = context.DeserializeJsonFromFile<SolutionConfig>("../buildConfig.json");
-
-        var projectPath = Path.Combine("..", Project, ConfigFileName);
-        if (!File.Exists(projectPath))
+        // Solution config
         {
-            throw new ApplicationException($"Project-level \"{ConfigFileName}\" is missing");
+            SolutionConfig = LoadConfig<SolutionConfig>(context, Path.Combine("..", ConfigFileName));
         }
 
-        ProjectConfig = context.DeserializeJsonFromFile<ProjectConfig>(projectPath);
+        // Project picking
+        {
+            if (project is null)
+            {
+                if (SolutionConfig.DefaultProject is null)
+                {
+                    throw new InvalidOperationException("No project specified as an argument and no default project specified in the solution config");
+                }
 
-        ProjectFile = Path.Combine("..", Project, $"{Project}.csproj");
+                InternalConfig.Project = SolutionConfig.DefaultProject;
+            }
+            else
+            {
+                InternalConfig.Project = project;
+            }
+
+            InternalConfig.ProjectFilePath = Path.Combine("..", InternalConfig.Project, $"{InternalConfig.Project}.csproj");
+        }
+
+        // Project config
+        {
+            ProjectConfig = LoadConfig<ProjectConfig>(context, Path.Combine("..", InternalConfig.Project, ConfigFileName));
+        }
     }
 
-    public string InputPath(string? fileName = null)
+    private static TConfig LoadConfig<TConfig>(ICakeContext context, string path)
     {
-        var inputPath = Path.Combine("..", Project, "bin", Profile);
-        if (!string.IsNullOrWhiteSpace(ProjectConfig.OutputSubdir))
-        {
-            inputPath = Path.Combine(inputPath, ProjectConfig.OutputSubdir);
-        }
-
-        inputPath = Path.Combine(inputPath, "publish");
-        return fileName == null ? inputPath : Path.Combine(inputPath, fileName);
-    }
-
-    public string OutputPath(string? fileName = null)
-    {
-        var outputPath = Path.Combine("..", "out");
-        this.EnsureDirectoryExists(outputPath);
-        return fileName == null ? outputPath : Path.Combine(outputPath, fileName);
+        return !File.Exists(path)
+            ? throw new InvalidOperationException($"Configuration file {path} not found")
+            : context.DeserializeJsonFromFile<TConfig>(path);
     }
 }

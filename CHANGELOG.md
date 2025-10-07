@@ -1,3 +1,21 @@
+## 0.4.0
+**:boom: Breaking Changes**
+- Renamed `--oproject` to `--general-project`
+- Renamed `--oprofile` to `--general-profile`
+- Renamed `--oversion` to `--general-version`
+- Renamed `--oskip-substitution` to `--general-skipSubstitution`
+
+**:sparkles: Features**
+- Added `defaultProject` to solution-level config, making `--general-project` optional
+  - [!] One of these does need to be defined
+- Added default value of `12.34.56` to `--general-version`, making it optional
+
+**:bug: Bug Fixes**
+- Fixed `Substitute` step not using the correct method of skipping execution if `--general-skipSubstitution` was defined
+
+**:recycle: Refactors**
+- Wrapped internal configuration in an `InternalConfig` class
+
 ## 0.3.0
 **:boom: Breaking Changes**
 - Removed `Version` parameter from `SolutionConfig`

@@ -1,3 +1,4 @@
 {
-  "name": "CommonBuild"
+  "name": "CommonBuild",
+  "defaultProject": "Common.Build"
 }

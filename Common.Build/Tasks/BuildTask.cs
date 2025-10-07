@@ -14,14 +14,14 @@ public class BuildTask : FrostingTask<BuildContext>
     {
         var cleanConfig = new DotNetCleanSettings
         {
-            Configuration = context.Profile
+            Configuration = context.InternalConfig.Profile
         };
-        context.DotNetClean(context.ProjectFile, cleanConfig);
+        context.DotNetClean(context.InternalConfig.ProjectFilePath, cleanConfig);
 
         var publishConfig = new DotNetPublishSettings
         {
-            Configuration = context.Profile
+            Configuration = context.InternalConfig.Profile
         };
-        context.DotNetPublish(context.ProjectFile, publishConfig);
+        context.DotNetPublish(context.InternalConfig.ProjectFilePath, publishConfig);
     }
 }

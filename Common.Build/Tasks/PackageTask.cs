@@ -13,11 +13,11 @@ public class PackageTask : FrostingTask<BuildContext>
     {
         var packConfig = new DotNetPackSettings
         {
-            Configuration = context.Profile,
+            Configuration = context.InternalConfig.Profile,
             NoRestore = true,
             NoBuild = true,
-            OutputDirectory = context.OutputPath()
+            OutputDirectory = PathHandling.OutputPath(context)
         };
-        context.DotNetPack(context.ProjectFile, packConfig);
+        context.DotNetPack(context.InternalConfig.ProjectFilePath, packConfig);
     }
 }

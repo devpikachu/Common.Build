@@ -1,8 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using JetBrains.Annotations;
 
 namespace Common.Build.Config;
 
-[UsedImplicitly]
+[SuppressMessage("ReSharper", "CollectionNeverUpdated.Global")]
 public class ProjectConfig
 {
     public required string? Name { get; [UsedImplicitly] init; }

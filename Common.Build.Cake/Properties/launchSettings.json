@@ -3,7 +3,7 @@
     "Library": {
       "commandName": "Project",
       "executablePath": "dotnet",
-      "commandLineArgs": "--target Build --oproject \"Common.Build\" --oversion 12.34.56 --oskip-substitution true",
+      "commandLineArgs": "--target Build --general-skipSubstitution true",
       "workingDirectory": "$(ProjectDir)"
     }
   }
