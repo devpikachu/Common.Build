@@ -1,4 +1,5 @@
 when:
+  - event: manual
   - event: push
     branch: main
 
@@ -12,3 +13,9 @@ steps:
     image: mcr.microsoft.com/dotnet/sdk:9.0
     commands:
       - bash build.sh --target Build --general-project ${PROJECT}
+
+  - name: lint
+    image: jetbrains/qodana-dotnet2025.2
+    environment:
+      QODANA_TOKEN:
+        from_secret: qodana_token

@@ -1,5 +1,4 @@
 using Cake.Common;
-using Cake.Common.IO;
 using Cake.Core;
 using Cake.Frosting;
 using Cake.Json;
