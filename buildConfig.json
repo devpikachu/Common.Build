@@ -1,4 +1,5 @@
 {
+  "$schema": "schemas/solution.schema.json",
   "name": "CommonBuild",
   "defaultProject": "Common.Build"
 }

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "https://git.omni.ms/vintage-story-mods/common-build/raw/branch/main/schemas/project.schema.json",
+  "title": "Project Configuration",
+  "description": "Project-level build configuration",
+  "type": "object",
+  "required": [
+    "substitute"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the project",
+      "minLength": 1
+    },
+    "outputSubdir": {
+      "type": "string",
+      "description": "The subdirectory the project is built into, used to flatten archives",
+      "minLength": 1
+    },
+    "substitute": {
+      "type": "array",
+      "description": "The list of relative paths pointing to files to perform variable substitutions in",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

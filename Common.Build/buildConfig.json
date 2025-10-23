@@ -1,6 +1,5 @@
 {
-  "name": null,
-  "outputSubdir": null,
+  "$schema": "../schemas/project.schema.json",
   "substitute": [
     "Common.Build.csproj"
   ]

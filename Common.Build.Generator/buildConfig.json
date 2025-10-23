@@ -1,6 +1,6 @@
 {
+  "$schema": "../schemas/project.schema.json",
   "name": "Generator",
-  "outputSubdir": null,
   "substitute": [
     "Common.Build.Generator.csproj"
   ]
