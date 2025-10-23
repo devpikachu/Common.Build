@@ -4,20 +4,27 @@
   "title": "Solution Configuration",
   "description": "Solution-level build configuration",
   "type": "object",
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "The name of the overall project",
-      "minLength": 1
-    },
-    "defaultProject": {
-      "type": "string",
-      "description": "The default project to use when none is specified",
-      "minLength": 1,
-      "pattern": "^[a-zA-Z\\.]+$"
-    }
-  },
   "required": [
     "name"
-  ]
+  ],
+  "properties": {
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The name of the overall project",
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9]+$"
+    },
+    "defaultProject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The default project to use when none is specified",
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9\\.]+$"
+    }
+  }
 }

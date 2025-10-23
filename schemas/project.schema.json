@@ -9,12 +9,19 @@
   ],
   "properties": {
     "name": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "The name of the project",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9]+$"
     },
     "outputSubdir": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "The subdirectory the project is built into, used to flatten archives",
       "minLength": 1
     },
