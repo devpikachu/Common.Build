@@ -1,3 +1,13 @@
+## 0.5.0
+**:hammer: Refactors**
+- Cleanup pass
+
+**:green_heart: CI/CD**
+- Added `pull: true` to all steps
+
+**:arrow_up: Dependencies**
+- Upgraded to `Cake.Frosting@5.1.0`
+
 ## 0.4.0
 **:boom: Breaking Changes**
 - Renamed `--oproject` to `--general-project`
