@@ -1,9 +1,18 @@
-![Banner](images/banner.png)
-
-[![GNU GPLv3](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) ![.NET Version](https://img.shields.io/badge/dotnet-9.0-%236F419A) [![CI Status](https://ci.omni.ms/api/badges/1/status.svg)](https://ci.omni.ms/repos/1) ![Latest Release](https://img.shields.io/gitea/v/release/vintage-story-mods/common-build?gitea_url=https%3A%2F%2Fgit.omni.ms&sort=semver&display_name=release&style=flat)
-
-Common library used by the Cake build systems across projects.
-
+<div align="center">
+    <img alt="Banner" src="images/banner.png" />
+    <br /><br />
+    <a title="GPL-3.0" target="_blank" href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+        <img alt="License Badge" src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg" />
+    </a>
+    <img alt=".NET Version Badge" src="https://img.shields.io/badge/dotnet-9.0-%236F419A" />
+    <a title="CI Pipeline" target="_blank" href="https://ci.omni.ms/repos/1">
+        <img alt="CI Status Badge" src="https://ci.omni.ms/api/badges/1/status.svg" />
+    </a>
+    <a title="Latest Release" target="_blank" href="https://git.omni.ms/vintage-story-mods/common-build/releases/latest">
+        <img alt="Latest Release Badge" src="https://img.shields.io/gitea/v/release/vintage-story-mods/common-build?gitea_url=https%3A%2F%2Fgit.omni.ms&sort=semver&display_name=release&style=flat" />
+    </a>
+    <h3>Common library used by the Cake build systems across projects.</h3>
+</div>
 
 ## License
 
