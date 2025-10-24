@@ -15,8 +15,9 @@ public class TasksGenerator : IIncrementalGenerator
         using JetBrains.Annotations;
 
         [UsedImplicitly]
-        [TaskName("Substitute")]
-        public class SubstituteTask : Common.Build.Tasks.SubstituteTask;
+        [TaskName("Archive")]
+        [IsDependentOn(typeof(BuildTask))]
+        public class ArchiveTask : Common.Build.Tasks.ArchiveTask;
 
         [UsedImplicitly]
         [TaskName("Build")]
@@ -24,14 +25,18 @@ public class TasksGenerator : IIncrementalGenerator
         public class BuildTask : Common.Build.Tasks.BuildTask;
 
         [UsedImplicitly]
-        [TaskName("Archive")]
-        [IsDependentOn(typeof(BuildTask))]
-        public class ArchiveTask : Common.Build.Tasks.ArchiveTask;
-
-        [UsedImplicitly]
         [TaskName("Package")]
         [IsDependentOn(typeof(BuildTask))]
         public class PackageTask : Common.Build.Tasks.PackageTask;
+
+        [UsedImplicitly]
+        [TaskName("Substitute")]
+        public class SubstituteTask : Common.Build.Tasks.SubstituteTask;
+
+        [UsedImplicitly]
+        [TaskName("Test")]
+        [IsDependentOn(typeof(BuildTask))]
+        public class TestTask : Common.Build.Tasks.TestTask;
         """;
 
     public void Initialize(IncrementalGeneratorInitializationContext context)

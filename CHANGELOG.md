@@ -1,3 +1,7 @@
+## 0.5.1
+**:sparkles: Features**
+- Added `Test` task
+
 ## 0.5.0
 **:hammer: Refactors**
 - Cleanup pass
