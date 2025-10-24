@@ -1,6 +1,9 @@
 # Common Build
 
-[![GNU GPLv3](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) ![.NET Version](https://img.shields.io/badge/dotnet-9.0-%236F419A) [![CI Status](https://ci.omni.ms/api/badges/1/status.svg)](https://ci.omni.ms/repos/1) ![Latest Release](https://img.shields.io/gitea/v/release/vintage-story-mods/common-build?gitea_url=https%3A%2F%2Fgit.omni.ms&sort=semver&display_name=release&style=flat)
+[![GNU GPLv3](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+![.NET Version](https://img.shields.io/badge/dotnet-9.0-%236F419A)
+[![CI Status](https://ci.omni.ms/api/badges/1/status.svg)](https://ci.omni.ms/repos/1)
+![Latest Release](https://img.shields.io/gitea/v/release/vintage-story-mods/common-build?gitea_url=https%3A%2F%2Fgit.omni.ms&sort=semver&display_name=release&style=flat)
 
 Common library used by the Cake build systems across projects.
 
