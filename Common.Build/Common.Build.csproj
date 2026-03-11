@@ -1,22 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Common.Build</PackageId>
-    <Version>12.34.56</Version>
     <Authors>Andrei "DetPikachu" Hava</Authors>
     <Company>Andrei "DetPikachu" Hava</Company>
+    <PackageId>Common.Build</PackageId>
     <Product>Common.Build</Product>
+    <Version>12.34.56</Version>
   </PropertyGroup>
 
+  <!-- NuGet References -->
   <ItemGroup>
-    <PackageReference Include="Cake.Frosting" Version="6.1.0" />
+    <PackageReference Include="Cake.Frosting" Version="6.1.0"/>
     <PackageReference Include="Cake.Json" Version="7.0.1"/>
     <PackageReference Include="JetBrains.Annotations" Version="2025.2.4">
       <ExcludeAssets>runtime</ExcludeAssets>
