@@ -3,6 +3,9 @@ on:
     tags:
       - '*'
 
+permissions:
+  packages: write
+
 env:
   DOTNET_VERSION: '10.0.x'
   NUGET_REGISTRY_URL: https://nuget.pkg.github.com/devpikachu/index.json

@@ -3,6 +3,9 @@ on:
     tags:
       - '*'
 
+permissions:
+  contents: write
+
 env:
   DOTNET_VERSION: '10.0.x'
 
