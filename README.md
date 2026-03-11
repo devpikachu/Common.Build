@@ -5,11 +5,11 @@
         <img alt="License Badge" src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg" />
     </a>
     <img alt=".NET Version Badge" src="https://img.shields.io/badge/dotnet-9.0-%236F419A" />
-    <a title="CI Pipeline" target="_blank" href="https://ci.omni.ms/repos/1">
-        <img alt="CI Status Badge" src="https://ci.omni.ms/api/badges/1/status.svg" />
+    <a title="CI Pipeline" target="_blank" href="https://github.com/devpikachu/Common.Build/actions">
+        <img alt="CI Status Badge" src="https://img.shields.io/github/check-runs/devpikachu/Common.Build/main" />
     </a>
-    <a title="Latest Release" target="_blank" href="https://git.omni.ms/vintage-story-mods/common-build/releases/latest">
-        <img alt="Latest Release Badge" src="https://img.shields.io/gitea/v/release/vintage-story-mods/common-build?gitea_url=https%3A%2F%2Fgit.omni.ms&sort=semver&display_name=release&style=flat" />
+    <a title="Latest Release" target="_blank" href="https://github.com/devpikachu/Common.Build/releases/latest">
+        <img alt="Latest Release Badge" src="https://img.shields.io/github/v/release/devpikachu/Common.Build" />
     </a>
     <h3>Common library used by the Cake build systems across projects.</h3>
 </div>
@@ -20,7 +20,7 @@
 
 The contents of this repository are licensed under the [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
 
-Copyright (C) 2025  Andrei "DetPikachu" Hava.
+Copyright (C) 2025 - 2026 Andrei "DetPikachu" Hava.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

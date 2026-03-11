@@ -9,9 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cake.Frosting" Version="5.1.0"/>
+    <PackageReference Include="Cake.Frosting" Version="6.1.0" />
     <PackageReference Include="Cake.Json" Version="7.0.1"/>
-    <PackageReference Include="JetBrains.Annotations" Version="2025.2.2">
+    <PackageReference Include="JetBrains.Annotations" Version="2025.2.4">
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
@@ -30,7 +30,6 @@
     <None Include="../build.sh"/>
     <None Include="../buildConfig.json"/>
     <None Include="../CHANGELOG.md"/>
-    <None Include="../GITMOJI.md"/>
     <None Include="../README.md"/>
   </ItemGroup>
 
