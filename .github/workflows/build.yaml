@@ -22,7 +22,7 @@ jobs:
       - name: Setup .NET SDK 10
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: "$DOTNET_VERSION"
+          dotnet-version: ${{ env.DOTNET_VERSION }}
       - name: Build
         run: bash build.sh --target Build --general-project ${{ matrix.project }}
 
