@@ -13,9 +13,9 @@ public class SubstituteTask : FrostingTask<BuildContext>
 
     public override void Run(BuildContext context)
     {
-        foreach (var substitute in context.ProjectConfig.Substitute)
+        foreach (var substitutionTarget in context.ProjectConfig.SubstitutionTargets)
         {
-            var path = Path.Combine("..", context.InternalConfig.Project, substitute);
+            var path = Path.Combine("..", context.InternalConfig.Project, substitutionTarget);
             if (!File.Exists(path))
             {
                 throw new ApplicationException($"File for substitution \"{path}\" does not exist");
@@ -24,6 +24,10 @@ public class SubstituteTask : FrostingTask<BuildContext>
             var contents = File.ReadAllText(path);
 
             contents = contents.Replace(VersionPlaceholder, context.InternalConfig.Version);
+            foreach (var substitution in context.SolutionConfig.Substitutions ?? [])
+            {
+                contents = contents.Replace(substitution.Key, substitution.Value);
+            }
 
             File.WriteAllText(path, contents);
         }

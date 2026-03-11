@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/devpikachu/Common.Build/refs/heads/main/schemas/config.schema.json",
+  "title": "Configuration",
+  "description": "Build configuration",
+  "type": "object",
+  "required": [
+    "projects"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "archiveName": {
+      "type": "string",
+      "description": "The name of the archive emitted by the archival task.",
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9]+$"
+    },
+    "defaultProject": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The default project to use when none is specified.",
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9\\.]+$"
+    },
+    "projects": {
+      "type": "array",
+      "description": "The list of projects that can be built.",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The project name. Must match the subdirectory and csproj file name exactly.",
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\.]+$"
+          },
+          "archiveSuffix": {
+            "type": "string",
+            "description": "The suffix to append to the archive name emitted by the archival task.",
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9]+$"
+          },
+          "outputSubdirectory": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Used by path handling, primarily by the archival task. Specify if the files to be archived are in a subdirectory of the output.",
+            "minLength": 1
+          },
+          "substitutionTargets": {
+            "type": "array",
+            "description": "A list of relative file paths to perform substitution on.",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "substitutions": {
+      "type": "object",
+      "description": "Key-value pairs of substitution to be performed, in addition to the built-in ones.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
