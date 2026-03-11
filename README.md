@@ -11,7 +11,7 @@
     <a title="Latest Release" target="_blank" href="https://github.com/devpikachu/Common.Build/releases/latest">
         <img alt="Latest Release Badge" src="https://img.shields.io/github/v/release/devpikachu/Common.Build" />
     </a>
-    <h3>Common library used by the Cake build systems across projects.</h3>
+    <h3>Common library used by the Cake build system for Vintage Story mods. </h3>
 </div>
 
 ## License
@@ -29,8 +29,8 @@ the Free Software Foundation, either version 3 of the License, or
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+along with this program. If not, see <https://www.gnu.org/licenses/>.
