@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-      - *
+      - '*'
 
 env:
   DOTNET_VERSION: '10.0.x'
