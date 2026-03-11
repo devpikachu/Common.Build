@@ -1,3 +1,11 @@
+## 0.6.0
+**Other**
+- Upgraded to .NET 10
+
+## 0.5.3
+**Other**
+- Moved to GitHub
+
 ## 0.5.1
 **:sparkles: Features**
 - Added `Test` task
