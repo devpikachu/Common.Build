@@ -8,9 +8,9 @@ public static class PathHandling
     {
         var inputPath = Path.Combine("..", context.InternalConfig.Project, "bin", context.InternalConfig.Profile);
 
-        if (!string.IsNullOrWhiteSpace(context.ProjectConfig.OutputSubdir))
+        if (!string.IsNullOrWhiteSpace(context.ProjectConfig.OutputSubdirectory))
         {
-            inputPath = Path.Combine(inputPath, context.ProjectConfig.OutputSubdir);
+            inputPath = Path.Combine(inputPath, context.ProjectConfig.OutputSubdirectory);
         }
 
         inputPath = Path.Combine(inputPath, "publish");

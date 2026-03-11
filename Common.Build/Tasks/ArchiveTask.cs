@@ -11,11 +11,16 @@ public class ArchiveTask : FrostingTask<BuildContext>
 {
     public override void Run(BuildContext context)
     {
-        var archiveName = new StringBuilder(context.SolutionConfig.Name.ToLowerInvariant());
-        if (!string.IsNullOrWhiteSpace(context.ProjectConfig.Name))
+        if (string.IsNullOrWhiteSpace(context.SolutionConfig.ArchiveName))
+        {
+            throw new InvalidOperationException("Archival task invoked without specifying an archive name in the build config");
+        }
+
+        var archiveName = new StringBuilder(context.SolutionConfig.ArchiveName);
+        if (!string.IsNullOrWhiteSpace(context.ProjectConfig.ArchiveSuffix))
         {
             archiveName.Append('_');
-            archiveName.Append(context.ProjectConfig.Name.ToLowerInvariant());
+            archiveName.Append(context.ProjectConfig.ArchiveSuffix);
         }
 
         archiveName.Append('_');

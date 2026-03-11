@@ -1,5 +1,20 @@
 {
-  "$schema": "schemas/solution.schema.json",
-  "name": "CommonBuild",
-  "defaultProject": "Common.Build"
+  "$schema": "schemas/config.schema.json",
+  "archiveName": "commonbuild",
+  "defaultProject": "Common.Build",
+  "projects": [
+    {
+      "name": "Common.Build",
+      "substitutionTargets": [
+        "Common.Build.csproj"
+      ]
+    },
+    {
+      "name": "Common.Build.Generator",
+      "archiveSuffix": "generator",
+      "substitutionTargets": [
+        "Common.Build.Generator.csproj"
+      ]
+    }
+  ]
 }

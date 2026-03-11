@@ -1,3 +1,10 @@
+## 0.7.0
+**Features**
+- Added the configuration file name as an argument
+- Merged the project and solution configuration files
+- Separated archive naming from project names
+- Added ability to add arbitrary substitutions
+
 ## 0.6.0
 **Other**
 - Upgraded to .NET 10
