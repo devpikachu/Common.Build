@@ -56,7 +56,10 @@
             "minLength": 1
           },
           "substitutionTargets": {
-            "type": "array",
+            "type": [
+              "array",
+              "null"
+            ],
             "description": "A list of relative file paths to perform substitution on.",
             "items": {
               "type": "string",
@@ -68,7 +71,10 @@
       }
     },
     "substitutions": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "description": "Key-value pairs of substitution to be performed, in addition to the built-in ones.",
       "additionalProperties": {
         "type": "string"

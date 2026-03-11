@@ -9,11 +9,11 @@ public class SubstituteTask : FrostingTask<BuildContext>
 {
     private const string VersionPlaceholder = "12.34.56";
 
-    public override bool ShouldRun(BuildContext context) => !context.InternalConfig.SkipSubstitution && context.ProjectConfig.SubstitutionTargets.Count != 0;
+    public override bool ShouldRun(BuildContext context) => !context.InternalConfig.SkipSubstitution && (context.ProjectConfig.SubstitutionTargets ?? []).Count != 0;
 
     public override void Run(BuildContext context)
     {
-        foreach (var substitutionTarget in context.ProjectConfig.SubstitutionTargets)
+        foreach (var substitutionTarget in context.ProjectConfig.SubstitutionTargets ?? [])
         {
             var path = Path.Combine("..", context.InternalConfig.Project, substitutionTarget);
             if (!File.Exists(path))
