@@ -56,6 +56,7 @@ public class BuildContext : FrostingContext
                 InternalConfig.Project = project;
             }
 
+            InternalConfig.ProjectFilePath = Path.Combine("..", InternalConfig.Project, $"{InternalConfig.Project}.csproj");
             ProjectConfig = SolutionConfig.Projects.First(projectConfig => projectConfig.Name == InternalConfig.Project);
         }
     }
